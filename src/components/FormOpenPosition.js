@@ -87,7 +87,6 @@ function FormOpenPosition() {
             leverage: +leverage,
             market_id: +marketID,
             status: 1,
-            entry_price: 1529
         }
         const res = await axios.post(SubmitPosition, { position })
 

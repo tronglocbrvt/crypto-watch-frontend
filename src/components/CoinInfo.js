@@ -46,7 +46,7 @@ const CoinInfo = ({ coin }) => {
   useEffect(() => {
     const interval = setInterval(() => {
         fetchHistoricData();
-    }, 1000*60*60);
+    }, 5000);
     return () => clearInterval(interval);
   }, [hours]);
 
