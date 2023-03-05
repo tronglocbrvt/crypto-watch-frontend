@@ -43,7 +43,6 @@ const markets = [
 function FormOpenPosition() {
     const [open, setOpen] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [unrealizedPL, setUnrealizedPL] = useState();
     const [asset, setAsset] = useState('ETH/USD');
     const [side, setSide] = useState('Buy');
     const [size, setSize] = useState();
@@ -91,14 +90,15 @@ function FormOpenPosition() {
         const res = await axios.post(SubmitPosition, { position })
 
         setOpen(false);
-        setSuccess(true);
-        setUnrealizedPL(res.data.unrealized_pnl)
+        if (res.data.flag === 200) {
+            setSuccess(true);
+        }
     };
 
     useEffect(() => { }, [success]);
 
     if (success) {
-        return <OpenPositionSuccess unrealized_pnl={unrealizedPL} />
+        return <OpenPositionSuccess />
     }
 
     return (

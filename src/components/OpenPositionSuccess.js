@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-function OpenPositionSuccess(props) {
+function OpenPositionSuccess() {
   const [open, setOpen] = useState(true);
 
   const handleClose = () => {
@@ -24,7 +24,7 @@ function OpenPositionSuccess(props) {
         <DialogTitle id="open-position-dialog-title">{"Open a synthetic position"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="open-position-dialog-description" color="white"> 
-            Successfully! Your unrealized P&L is {props.unrealized_pnl}
+          Successfully!
           </DialogContentText>
         </DialogContent>
         <DialogActions>
