@@ -17,12 +17,12 @@ const CoinPage = () => {
     setPrice(data);
   };
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//         fetchPrice();
-//     }, 5000);
-//     return () => clearInterval(interval);
-//   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+        fetchPrice();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
         fetchPrice();
