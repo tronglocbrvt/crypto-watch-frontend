@@ -13,7 +13,7 @@ import { chartHours } from "../config/data";
 
 const CoinInfo = () => {
   const [historicData, setHistoricData] = useState();
-  const [hours, setHours] = useState(3);
+  const [hours, setHours] = useState(+process.env.REACT_APP_CONFIG_OPTION_CHART);
   const [flag,setflag] = useState(false);
 
   const useStyles = makeStyles((theme) => ({
@@ -47,7 +47,7 @@ const CoinInfo = () => {
     fetchHistoricData();
     const interval = setInterval(() => {
         fetchHistoricData();
-    }, 1000*60*60);
+    }, process.env.REACT_APP_TIME_INTERVAL_CALL_API);
     return () => clearInterval(interval);
   }, [hours]);
 

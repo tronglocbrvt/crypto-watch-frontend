@@ -21,12 +21,8 @@ const CoinPage = () => {
     fetchPrice();
     const interval = setInterval(() => {
         fetchPrice();
-    }, 1000*60*60);
+    }, process.env.REACT_APP_TIME_INTERVAL_CALL_API);
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-        fetchPrice();
   }, []);
 
   const useStyles = makeStyles((theme) => ({

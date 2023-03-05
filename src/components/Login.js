@@ -37,7 +37,7 @@ function Login() {
     }
 
     return (
-        <GoogleOAuthProvider clientId="143556138247-huq355tmrjci95c8rjfmrbglrt98tcr5.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID_GOOGLE_OAUTH}>
             <GoogleLogin onSuccess={onSuccess} onError={onFailure} />
         </GoogleOAuthProvider>
     );
