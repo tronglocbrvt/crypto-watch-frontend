@@ -43,10 +43,12 @@ const CoinInfo = () => {
     setHistoricData(data.prices);
   };
 
+  fetchHistoricData();
+  
   useEffect(() => {
     const interval = setInterval(() => {
         fetchHistoricData();
-    }, 1000*60*10);
+    }, 1000*60*60);
     return () => clearInterval(interval);
   }, [hours]);
 

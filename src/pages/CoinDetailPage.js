@@ -17,10 +17,12 @@ const CoinPage = () => {
     setPrice(data);
   };
 
+  fetchPrice();
+
   useEffect(() => {
     const interval = setInterval(() => {
         fetchPrice();
-    }, 1000*60*10);
+    }, 1000*60*60);
     return () => clearInterval(interval);
   }, []);
 
@@ -115,6 +117,11 @@ const CoinPage = () => {
               )}
             </Typography>
           </span>
+          <Typography variant="subtitle1" style={{
+                fontFamily: "Montserrat",
+              }}>
+             (Refresh every 10 minutes)
+          </Typography>
         </div>
       </div>
       <CoinInfo />
