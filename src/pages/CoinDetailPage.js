@@ -20,7 +20,7 @@ const CoinPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
         fetchPrice();
-    }, 5000);
+    }, 1000*60*10);
     return () => clearInterval(interval);
   }, []);
 
