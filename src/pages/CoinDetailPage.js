@@ -17,9 +17,8 @@ const CoinPage = () => {
     setPrice(data);
   };
 
-  fetchPrice();
-
   useEffect(() => {
+    fetchPrice();
     const interval = setInterval(() => {
         fetchPrice();
     }, 1000*60*60);

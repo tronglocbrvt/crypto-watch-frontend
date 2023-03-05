@@ -42,10 +42,9 @@ const CoinInfo = () => {
     setflag(true);
     setHistoricData(data.prices);
   };
-
-  fetchHistoricData();
   
   useEffect(() => {
+    fetchHistoricData();
     const interval = setInterval(() => {
         fetchHistoricData();
     }, 1000*60*60);
