@@ -11,9 +11,9 @@ import {
 import SelectButton from "./SelectButton";
 import { chartHours } from "../config/data";
 
-const CoinInfo = ({ coin }) => {
+const CoinInfo = () => {
   const [historicData, setHistoricData] = useState();
-  const [hours, setHours] = useState(24);
+  const [hours, setHours] = useState(3);
   const [flag,setflag] = useState(false);
 
   const useStyles = makeStyles((theme) => ({

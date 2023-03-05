@@ -117,7 +117,7 @@ const CoinPage = () => {
           </span>
         </div>
       </div>
-      <CoinInfo coin={price} />
+      <CoinInfo />
     </div>
   );
 };
